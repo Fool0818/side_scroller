@@ -34,14 +34,14 @@ def scale_image(image, new_width):
     return pygame.transform.scale(image, scaled_size)
 
 # load background image
-bg = pygame.image.load('images/bg.png').convert_alpha()
+bg = bg = pygame.image.load('python_side_scroller/images/bg.png').convert_alpha()
 bg = scale_image(bg, game_width)
 bg_scroll = 0
 
 # load and scale the airplane images
 airplane_images = []
 for i in range(2):
-    airplane_image = pygame.image.load(f'images/player/fly{i}.png').convert_alpha()
+    airplane_image = pygame.image.load(f'python_side_scroller/images/player/fly{i}.png')
     airplane_image = scale_image(airplane_image, 70)
     airplane_images.append(airplane_image)
 
@@ -49,7 +49,7 @@ for i in range(2):
 heart_images = []
 heart_image_index = 0
 for i in range(8):
-    heart_image = pygame.image.load(f'images/hearts/heart{i}.png').convert_alpha()
+    heart_image = pygame.image.load(f'python_side_scroller/images/hearts/heart{i}.png')
     heart_image = scale_image(heart_image, 30)
     heart_images.append(heart_image)
 
@@ -67,7 +67,7 @@ for bird_color in bird_colors:
     for i in range(4):
 
         # load and scale the image
-        bird_image = pygame.image.load(f'images/birds/{bird_color}{i}.png').convert_alpha()
+        bird_image = pygame.image.load(f'python_side_scroller/images/birds/{bird_color}{i}.png')
         bird_image = scale_image(bird_image, 50)
 
         # horizontally flip the image to make the bird face left
